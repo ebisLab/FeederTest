@@ -122,18 +122,15 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 
-         let firstFeed,
-        secondFeed;
-        beforeEach(done => {
+         beforeEach(done => {
             loadFeed(0, function(){
-                firstFeed = $(".feed").html();
-                done();
-            });
+            firstFeed = $(".feed").html(); 
 
-            loadFeed(1, function(){
+                loadFeed(1, function(){
                 secondFeed = $(".feed").html();
                 done();
             })
+            }); 
         });
 
          it('content changes when new feed is loaded', function(){
